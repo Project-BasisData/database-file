@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Jun 2021 pada 19.36
+-- Waktu pembuatan: 21 Jun 2021 pada 12.41
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.2
 
@@ -122,17 +122,17 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(56, '2014_10_12_000000_create_users_table', 1),
-(57, '2014_10_12_100000_create_password_resets_table', 1),
-(58, '2019_08_19_000000_create_failed_jobs_table', 1),
-(59, '2021_06_12_173123_create_owners_table', 1),
-(60, '2021_06_12_173204_create_customers_table', 1),
-(61, '2021_06_12_173240_create_cafes_table', 1),
-(62, '2021_06_13_134932_create_categories_table', 1),
-(63, '2021_06_13_134933_create_menus_table', 1),
-(64, '2021_06_13_171829_create_reviews_table', 1),
-(65, '2021_06_13_172543_create_searches_table', 1),
-(66, '2021_06_13_172606_create_photos_table', 1);
+(111, '2014_10_12_000000_create_users_table', 1),
+(112, '2014_10_12_100000_create_password_resets_table', 1),
+(113, '2019_08_19_000000_create_failed_jobs_table', 1),
+(114, '2021_06_12_173123_create_owners_table', 1),
+(115, '2021_06_12_173204_create_customers_table', 1),
+(116, '2021_06_12_173240_create_cafes_table', 1),
+(117, '2021_06_13_134932_create_categories_table', 1),
+(118, '2021_06_13_134933_create_menus_table', 1),
+(119, '2021_06_13_171829_create_reviews_table', 1),
+(120, '2021_06_13_172543_create_searches_table', 1),
+(121, '2021_06_13_172606_create_photos_table', 1);
 
 -- --------------------------------------------------------
 
@@ -191,7 +191,7 @@ CREATE TABLE `reviews` (
   `customer_id` bigint(20) UNSIGNED NOT NULL,
   `cafe_id` bigint(20) UNSIGNED NOT NULL,
   `desc_review` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rating` decimal(1,1) NOT NULL,
+  `rating` tinyint(4) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -356,7 +356,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT untuk tabel `owners`
